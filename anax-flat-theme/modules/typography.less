@@ -1,0 +1,41 @@
+/**
+ * Import the parts making up the typographic grid.
+ */
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+ @hgridBackground: "../img/grid/magic-number-22.png";
+ //@hgridBackground: "../img/grid/magic-number-24.png";
+
+
+ .typographyHeadings();
+ .typographyTextElements();
+ .typographyCodeElements();
+ .typographyListElements();
+ .typographyTableElements();
+ .typographyOtherElements();
+
+ .inner-wrap {
+     html.hgrid & {
+          #hgrid .showGrid(@hgridBackground);
+     }
+ }
+
+ body {
+     #hgrid .font();
+ }
+
+ .route-typography {
+     .inner-wrap-main {
+          #hgrid .showGrid(@hgridBackground);
+     }
+ }
+
+ // Grid page - Grid ------------------------------------------------------------
+ .route-typography {
+     .inner-wrap-main {
+         color: #fff;
+     }
+ }

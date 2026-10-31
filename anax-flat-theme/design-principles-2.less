@@ -1,0 +1,37 @@
+/**
+* Anax Flat Design Principles 2 theme.
+*/
+
+@import url(base.less);
+
+@bodyColor: rgba(255, 255, 255, 0.8);
+@topBottomColor: rgba(0, 0, 0, 0.8);
+
+// Links
+@linkNormalColor: #fff;
+@linkVisitedColor: #ddd;
+@linkHoverColor: #559999;
+@linkActiveColor: #ff0000;
+
+.wrap-all {
+    background-image: url("../img/perspective.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.site-logo-text {
+    .setLinkColor(#fff);
+}
+
+.inner-wrap-main {
+    .setLinkColor(#000, #333, @linkHoverColor, @linkActiveColor);
+}
+
+.footer {
+    color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+}

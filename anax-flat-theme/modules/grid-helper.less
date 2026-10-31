@@ -1,0 +1,11 @@
+.showGrid(@backgroundImg, @maxWidth: 960px) {
+    background: url("@{backgroundImg}") repeat-y fixed center center;
+    background-size: 100% auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: @maxWidth;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}

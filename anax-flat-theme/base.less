@@ -1,0 +1,133 @@
+/**
+* Anax Flat base theme.
+*/
+
+@import url(modules.less);
+
+// Page color
+@backgroundColor: #fff;
+@bodyColor: #fff;
+@topBottomColor: #fff;
+@textColor: #000;
+@accentColor: #000;
+
+// Buttons
+@buttonNormalColor: #000;
+@buttonHoverColor: #555;
+@buttonSelectedColor: #555;
+@buttonBorderColor: #fff;
+
+// Links
+@linkNormalColor: #000;
+@linkVisitedColor: #ff0000;
+@linkHoverColor: #323232;
+@linkActiveColor: #ff0000;
+
+@maxButtonFontSize: 2em;
+@navbarItemBgColor: @buttonNormalColor;
+@navbarItemHoverBgColor: @buttonHoverColor;
+@footerBorderColor: #000;
+
+body {
+    background-color: @backgroundColor;
+    color: @textColor;
+}
+
+.inner-wrap {
+    background-color: @bodyColor;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.setLinkColor(@linkNormalColor, @linkVisitedColor, @linkHoverColor, @linkActiveColor);
+
+figcaption {
+    text-align: center;
+}
+
+.hljs {
+    background-color: @backgroundColor;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Size of max navbar button
+.rm-max .rm-small .rm-button {
+    font-size: 2em;
+}
+
+.inner-wrap-header,
+.inner-wrap-flash,
+.inner-wrap-breadcrumb,
+.inner-wrap-footer,
+.byline-wrapper {
+    background-color: @topBottomColor;
+}
+
+.rm-desktop li {
+    &.selected {
+        a {
+            background-color: @buttonSelectedColor;
+        }
+    }
+    border: 2px solid @buttonBorderColor;
+}
+
+.profile {
+    color: @textColor;
+    .setLinkColor(#fff);
+}
+
+// Site title
+.site-logo-text {
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: @textColor;
+        font: @fontFamilyHeadings;
+    }
+
+    a:active {
+        color: #999;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.byline-wrapper {
+    background-color: @topBottomColor;
+}
+
+.inner-wrap-header,
+.inner-wrap-footer,
+.byline-wrapper {
+    color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+        color: @accentColor;
+    }
+}
+
+.inner-wrap-footer {
+    background-color: @topBottomColor;
+}
+
+.footer-column-2 {
+    border-left: 2px solid @footerBorderColor;
+    border-right: 2px solid @footerBorderColor;
+    border-color: @backgroundColor;
+}
+
+/** --------------------------------------------------------------
+ *  About
+ */
+.aboutImage img {
+    background-color: white;
+}

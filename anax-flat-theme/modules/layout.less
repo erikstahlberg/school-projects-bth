@@ -1,0 +1,153 @@
+/**
+ * Grid
+ */
+@import url(grid.less);
+@import url(typography.less);
+@import url(grid-helper.less);
+
+@gridSize: 960px;
+@gridImage: "../img/grid/grid940x12x60x20-nomargin.png";
+
+.inner-wrap {
+    #vgrid .grid(@gridSize);
+
+    html.vgrid & {
+        .showGrid(@gridImage, @gridSize);
+    }
+
+    &.inner-wrap-header {
+        text-align: center;
+        html.vgrid & {
+            .showGrid(@gridImage, @gridSize);
+        }
+    }
+}
+
+.row {
+    #vgrid .row();
+}
+
+.breadcrumb-wrap,
+.nex-previous,
+.article {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.site-header,
+.flash-wrap,
+.breadcrumb-wrap,
+.next-previous,
+.site-footer {
+    #vgrid .column(12);
+}
+
+.next-previous,
+.article,
+.sidebar-left,
+.sidebar-right {
+    margin-bottom: @magicNumber;
+}
+
+.sidebar-left,
+.sidebar-right {
+    margin-top: @magicNumber;
+}
+
+.site-logo-text {
+    #vgrid .column(3);
+}
+
+.navbar2 {
+    #vgrid .column(9);
+}
+
+.next {
+    float: right;
+}
+
+.previous {
+    float: left;
+}
+
+.sidebar-left {
+    #vgrid .column(3);
+}
+
+.sidebar-right {
+    #vgrid .column(3);
+    #vgrid .pull-right(3);
+}
+
+.main {
+    #vgrid .column(10);
+    #vgrid .push(1);
+
+    &.has-sidebar {
+        #vgrid .column(9);
+    }
+}
+
+.byline-wrapper {
+    #vgrid .column(8);
+    #vgrid .push(2);
+}
+
+.footer-column {
+    #vgrid .column(4);
+}
+
+.site-footer {
+    text-align: center;
+}
+
+body {
+    border-sizing: border-box;
+}
+
+// Grid page - Grid ------------------------------------------------------------
+.route-grid {
+    @opacity: 75%;
+    color: black;
+
+    .profile {
+        a {
+            color: white;
+
+            &:visited {
+                color: #ccc;
+            }
+
+            &:active {
+                color: #999;
+            }
+        }
+    }
+
+    .inner-wrap {
+        .showGrid(@gridImage, @gridSize);
+    }
+
+    .main,
+    .site-footer {
+        background-color: fade(skyblue, @opacity);
+    }
+
+    .site-logo-text,
+    .navbar2,
+    .breadcrumb-wrap,
+    .byline-wrapper,
+    .footer-column-wrapper {
+        background-color: fade(lightgreen, @opacity);
+    }
+
+    .sidebar-left,
+    .sidebar-right,
+    .column {
+        background-color: fade(yellow, @opacity);
+    }
+
+    .row {
+        background-color: fade(burlywood, @opacity);
+    }
+}

@@ -1,0 +1,81 @@
+/**
+ * Regions, basics to show off the regions.
+ */
+
+.wrap-all {
+    margin: 0 auto;
+    max-width: 950px;
+}
+
+.outer-wrap-breadcrumb {
+    padding: 0 10px;
+}
+
+.outer-wrap-main {
+    padding: 0 10px;
+}
+
+.sidebar {
+    float: left;
+    width: 20%;
+}
+
+.main.has-sidebar-left {
+    float: left;
+    width: 80%;
+}
+
+.footer-column {
+    ul {
+        margin: 0;
+        padding: 1em;
+        list-style-type: circle;
+    }
+}
+
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.breadcrumb {
+    margin-bottom: 22px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline;
+
+        &::after {
+            content: " » ";
+        }
+    }
+}
+
+.breadcrumb-list li {
+    display: inline;
+    margin: 0;
+
+    &::after {
+        content: " » ";
+    }
+}
+
+.toc {
+    list-style: none;
+
+    li {
+        padding-bottom: 3px;
+    }
+}

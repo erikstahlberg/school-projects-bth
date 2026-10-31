@@ -1,0 +1,57 @@
+/**
+* Anax Flat dark theme.
+*/
+
+@import url(base.less);
+
+// Page color
+@bodyColor: #1E1E1E;
+@backgroundColor: #2D2D30;
+@topBottomColor: #4a4a4a;
+@textColor: #fff;
+@accentColor: #EBC816;
+
+// Buttons
+@buttonNormalColor: @backgroundColor;
+@buttonSelectedColor: @topBottomColor;
+@buttonBorderColor: #84be10;
+
+// Links
+@linkNormalColor: #84be10;
+@linkVisitedColor: #76ab0e;
+@linkHoverColor: #be4a10;
+@linkActiveColor: #983b0c;
+
+@footerBorderColor: #000;
+
+.inner-wrap-header,
+.inner-wrap-flash,
+.inner-wrap-breadcrumb,
+.inner-wrap-footer,
+.byline-wrapper {
+    color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+        color: @accentColor;
+    }
+}
+
+.site-logo-text {
+    .setLinkColor(@accentColor);
+}
+
+.profile {
+    color: @accentColor;
+    .setLinkColor(@accentColor);
+}
+
+.rm-desktop li {
+    &.selected {
+        a {
+            color: @accentColor;
+        }
+    }
+}
+
+hr {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+}

@@ -1,0 +1,55 @@
+/**
+* Anax Flat color theme.
+*/
+
+@import url(base.less);
+
+// Page color
+@bodyColor: #fff;
+@backgroundColor: #008dc7;
+@topBottomColor: #006994;
+@textColor: #000;
+@accentColor: #FF9000;
+
+// Buttons
+@buttonNormalColor: @backgroundColor;
+@buttonSelectedColor: @topBottomColor;
+@buttonBorderColor: #fff;
+
+// Links
+@linkNormalColor: #fff;
+@linkVisitedColor: #ddd;
+@linkHoverColor: #dd0000;
+@linkActiveColor: #ff0000;
+
+.inner-wrap-main {
+    .setLinkColor(#000, #333, @linkHoverColor, @linkActiveColor);
+}
+
+.inner-wrap-header,
+.inner-wrap-flash,
+.inner-wrap-breadcrumb,
+.inner-wrap-footer,
+.byline-wrapper {
+    color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+        color: @accentColor;
+    }
+}
+
+.site-logo-text {
+    .setLinkColor(@accentColor);
+}
+
+.profile {
+    color: @accentColor;
+    .setLinkColor(@accentColor);
+}
+
+.rm-desktop li {
+    &.selected {
+        a {
+            color: @accentColor;
+        }
+    }
+}

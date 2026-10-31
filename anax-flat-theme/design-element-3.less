@@ -1,0 +1,57 @@
+/**
+* Anax Flat Design Element 3 theme.
+*/
+
+@import url(color.less);
+
+@gridSize: 100%;
+@borderColor: #000;
+@borderSize: 5px;
+
+.inner-wrap {
+    #vgrid .grid(@gridSize);
+    border-left: @borderSize solid @borderColor;
+    border-right: @borderSize solid @borderColor;
+}
+
+.logo-1 {
+    display: none;
+}
+
+.site-logo-text {
+    #vgrid .column(2);
+}
+
+.navbar2 {
+    #vgrid .column(6);
+    #vgrid .push(1);
+}
+
+.flash-wrap {
+    #vgrid .push(3);
+}
+
+.breadcrumb-wrap {
+    border-top: @borderSize double @borderColor;
+    border-bottom: @borderSize double @borderColor;
+}
+
+.main {
+    #vgrid .column(6);
+    #vgrid .push(3);
+
+    &.has-sidebar {
+        #vgrid .column(6);
+    }
+    border-left: @borderSize solid @borderColor;
+    border-right: @borderSize solid @borderColor;
+}
+
+.byline-wrapper {
+    #vgrid .column(6);
+    #vgrid .push(3);
+    border-left: @borderSize solid @borderColor;
+    border-right: @borderSize solid @borderColor;
+    border-top: @borderSize double @borderColor;
+    border-bottom: @borderSize double @borderColor;
+}
